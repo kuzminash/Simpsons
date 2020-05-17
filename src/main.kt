@@ -4,10 +4,13 @@ const val size = 54
 
 fun firstTask(Permutations: MutableList<Permutation>) {
 
+    /***
+     * пусть базой будут просто все элементы
+     */
     val base: MutableList<Int> = ArrayList()
     for (i in 0 until size) {
         base.add(i)
-    } //пусть базой будут просто все элементы
+    }
 
     val myChain = CompleteStabilizerChain(base, Permutations)
 

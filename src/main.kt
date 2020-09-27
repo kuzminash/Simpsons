@@ -30,18 +30,6 @@ fun firstTask(Permutations: MutableList<Permutation>) {
     }
 }
 
-fun secondTask(Permutations: MutableList<Permutation>) {
-    for (i in 0 until size) {
-        for (j in i + 1 until size) {
-            val tree = TreeForTwoElements(Pair(i, j), Permutations)
-            if (tree.nodes.size != size * (size - 1)) {
-                println("Еще и две карты не могут перевестись в произвольное место колоды, очень очень жаль")
-                exitProcess(0)
-            }
-        }
-    }
-    println("Ура, любые два карты могут попасть в любые места позиции")
-}
 fun main() {
     val myPermutation: MutableList<Permutation> = ArrayList()
 
@@ -87,6 +75,4 @@ fun main() {
     myPermutation.add(reversePermutation) //закидываем все образующие которые у нас есть
 
     firstTask(myPermutation)
-
-    secondTask(myPermutation)
 }
